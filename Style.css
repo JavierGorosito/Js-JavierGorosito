@@ -1,0 +1,220 @@
+*{
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  a:visited{
+    color: black;
+    }
+a{
+    text-decoration: none;
+    text-decoration: solid;
+    }
+.fondo{
+    background-color: #FAD961;
+    background-image: linear-gradient(180deg, #FAD961 27%, #F76B1C 100%);
+    }
+img{
+    display: block;
+    margin: 0px auto;
+    }
+
+h1{
+    display: inline;
+    align-items: center;
+    }
+
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    }
+article{
+  text-align: center;
+    }
+button{
+    justify-content: center;
+    align-items: center;
+    }
+.logo{
+    display: inline;
+    }
+#menuLa{
+        display: flex;
+        flex-direction: column;
+    }
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+
+@media screen and (min-width:960px) {
+    h1{
+        font-size: 80px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    #instagram{
+        height: 50px;
+        width: 50px;
+    }
+    .cervezasVinos{
+        height: 250px;
+        width: 250px;
+        object-fit: contain;
+    }
+    .logo{
+        width: 250px;
+        height: 250px;
+    }
+    .portada{
+        width: 50%;
+        height: 50%;
+        padding: 1px;
+    }
+    #main{
+        display: grid;
+        grid-template-columns: 20% auto;
+        grid-template-rows: repeat(4,auto);
+        column-gap: 10px;
+        row-gap:10px;
+        grid-template-areas: "header header" "nav nav" "aside section" "footer footer";
+    }
+    .section{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(3,auto);
+        column-gap: 5px;
+        row-gap:5px;
+    }
+   
+    ul,
+    li{
+        display: flex;
+        flex-direction: row;
+        font-size: 50px;
+        justify-content: center;
+    }
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    label{
+        font-size: 30px;
+    }
+
+}
+@media screen and (min-width:320px) and (max-width:959px) {
+    h1{
+        font-size: 40px;
+    }
+
+    #instagram{
+        height: 40px;
+        width: 40px;
+    }
+    .cervezasVinos{
+        height: 150px;
+        width: 150px;
+        object-fit: contain;
+    }
+    
+    .portada{
+        width: 80%;
+        height: 80%;
+        padding: 1px;
+    }
+    p{
+        font-size: 20px;
+    }
+    #main{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+        column-gap: 10px;
+        row-gap:10px;
+        grid-template-areas: "header" "nav" "section" "footer";
+    }
+    .section{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(3,auto);
+        column-gap: 5px;
+        row-gap:5px;
+    }
+   
+    ul,
+    li{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        font-size: 20px;
+        justify-content: start;
+        padding: 0%;
+    }
+    
+    header{
+        display: flex;
+        margin-right: 50%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header>img{
+        width: 80px;
+        height: 80px;
+        justify-content: start;
+        margin-left: 0%;
+    }
+   
+    textarea{
+        opacity:0,6;
+        border: 2px 2px 2px, solid, black;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px white;
+        box-sizing: initial;
+        font-size: large;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+    }
+    input{
+        width: 100px;
+        height: 20px;
+    }
+    #map{
+        width: 200px;
+        height: 200px;
+    }
+    label{
+        font-size: 15px;
+        text-shadow: 2px 2px 2px white;
+    }
+    .search{
+        display: none;
+    }
+    footer{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+     
+       
+    }
+   
+
+
+}
