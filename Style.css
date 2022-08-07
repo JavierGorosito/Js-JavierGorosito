@@ -70,7 +70,6 @@ footer{
     grid-area: footer;
 }
 
-
 @media screen and (min-width:960px) {
     h1{
         font-size: 80px;
@@ -121,13 +120,18 @@ footer{
     }
     
     header{
-        display: flex;
+        display: inline;
         justify-content: space-between;
         align-items: center;
+    
     }
 
     label{
         font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+        text-align: center;
     }
 
 }
