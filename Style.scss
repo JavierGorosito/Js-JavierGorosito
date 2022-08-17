@@ -66,6 +66,30 @@ aside {
 footer {
 	grid-area: footer;
 }
+
+@mixin bordeColor ($tipo, $ancho, $color){
+	border-width: $ancho;
+	border-style: $tipo;
+	border-color: $color;
+}
+
+@if $rellenoParrafo == "si"{
+	@for $i from 1 through 3 {
+		.colorParrafo#{$i}{
+			background-color: map-get($mapaColoresParrafo, $i);
+		}
+	}
+}  
+
+@else if $rellenoParrafo == "no"{
+	@each $numero, $color in $mapaColoresParrafo{
+	.colorParrafo#{$numero}{
+		@include bordeColor(double, 10px, $color);
+	}
+	}
+}
+
+
 @media screen and (min-width:960px) {
 	h1 {
 		font-size: 80px;

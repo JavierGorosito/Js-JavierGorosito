@@ -81,6 +81,24 @@ footer {
   grid-area: footer;
 }
 
+.colorParrafo1 {
+  border-width: 10px;
+  border-style: double;
+  border-color: orange;
+}
+
+.colorParrafo2 {
+  border-width: 10px;
+  border-style: double;
+  border-color: red;
+}
+
+.colorParrafo3 {
+  border-width: 10px;
+  border-style: double;
+  border-color: black;
+}
+
 @media screen and (min-width: 960px) {
   h1 {
     font-size: 80px;
