@@ -18,7 +18,7 @@ a {
 	background-image: linear-gradient(180deg, #FAD961 27%, #F76B1C 100%);
 }
 img {
-	display: block;
+	display: inline-block;
 	margin: 0px auto;
 }
 h1 {
@@ -60,11 +60,22 @@ section {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+input{
+	text-decoration: solid;
+	text-align: center;
+	&:hover{
+		box-shadow: 2px 2px 2px ;
+	}
+}
 aside {
 	grid-area: aside;
 }
 footer {
+	display: flex;
+	align-items: center;
 	grid-area: footer;
+	justify-content: center;
+	margin: 10px;
 }
 
 @mixin bordeColor ($tipo, $ancho, $color){
@@ -89,7 +100,6 @@ footer {
 	}
 }
 
-
 @media screen and (min-width:960px) {
 	h1 {
 		font-size: 80px;
@@ -97,9 +107,9 @@ footer {
 	h2 {
 		font-size: 50px;
 	}
-	#instagram {
-		height: 50px;
-		width: 50px;
+	.instagram {
+		height: 100px;
+		width: 100px;
 	}
 	.cervezasVinos {
 		height: 250px;
@@ -149,19 +159,35 @@ footer {
 	}
 	label {
 		font-size: 30px;
+		text-align: center;
 	}
 	p {
 		font-size: 20px;
 		text-align: center;
 	}
+	.form-control{
+		width:50%;
+		margin-left:25%;
+	}
 }
 @media screen and (min-width:320px) and (max-width:959px) {
-	h1 {
-		font-size: 40px;
+	.header{
+		>img{
+			width: 90px;
+			height: 90px;
+			justify-content: center;
+			margin-left: 0%;
+		}
 	}
-	#instagram {
+	
+	h1 {
+		font-size: 30px;
+		justify-content: center;
+	}
+	.instagram {
 		height: 40px;
 		width: 40px;
+		justify-content: center;
 	}
 	.cervezasVinos {
 		height: 150px;
@@ -225,12 +251,11 @@ footer {
 		box-sizing: initial;
 		font-size: large;
 		align-items: center;
-		width: 100px;
-		height: 50px;
+		
 	}
-	input {
-		width: 100px;
-		height: 20px;
+	.form-control{
+		width:90%;
+		
 	}
 	#map {
 		width: 200px;
@@ -238,6 +263,7 @@ footer {
 	}
 	label {
 		font-size: 15px;
+		text-align:center;
 		text-shadow: 2px 2px 2px$background-color_2;
 	}
 	.search {
@@ -247,5 +273,20 @@ footer {
 		display: inline-block;
 		justify-content: center;
 		align-items: center;
+	}
+	.container-fluid{
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		align-items:center;
+	}
+	.datos{
+		padding: 2px;
+		>input{
+			display:flex;
+			flex-direction:column;
+			flex-wrap: nowrap;
+			margin-left: 20%;
+		}
 	}
 }
