@@ -19,7 +19,15 @@ a {
 }
 img {
 	display: inline-block;
-	margin: 0px auto;
+	justify-content: center;
+	object-fit: contain;
+}
+.fotos{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-left: auto;
+	margin-right: auto;
 }
 h1 {
 	display: inline;
@@ -30,6 +38,16 @@ h2 {
 	justify-content: center;
 	text-align: center;
 }
+p{
+	text-align: center;
+}
+label,
+input{
+	justify-content: center;
+	align-items: center;
+
+}
+
 article {
 	text-align: center;
 }
@@ -44,9 +62,7 @@ button {
 	display: flex;
 	flex-direction: column;
 }
-header {
-	grid-area: header;
-}
+
 nav {
 	grid-area: nav;
 }
@@ -75,7 +91,25 @@ footer {
 	align-items: center;
 	grid-area: footer;
 	justify-content: center;
-	margin: 10px;
+	margin: 5px;
+}
+
+.whatsapp {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #25d366;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	z-index: 100;
+}
+
+.whatsapp-icon {
+	margin-top: 13px;
 }
 
 @mixin bordeColor ($tipo, $ancho, $color){
@@ -120,6 +154,7 @@ footer {
 		width: 250px;
 		height: 250px;
 	}
+
 	.portada {
 		width: 50%;
 		height: 50%;
@@ -175,24 +210,37 @@ footer {
 		>img{
 			width: 90px;
 			height: 90px;
-			justify-content: center;
+			justify-content: start;
 			margin-left: 0%;
 		}
 	}
-	
+	.container-fluid{
+		padding: 5px 12px;
+		margin: 5px 0px;
+		display:flex;
+		flex-direction: column;
+	}
+	a{
+		font-size: 40px;
+		text-align:center;
+	}
 	h1 {
 		font-size: 30px;
+		text-align:center;
 		justify-content: center;
 	}
 	.instagram {
 		height: 40px;
 		width: 40px;
 		justify-content: center;
+		align-items: center;
 	}
-	.cervezasVinos {
-		height: 150px;
-		width: 150px;
-		object-fit: contain;
+	.img-fluid {
+		height: 60%;
+		width: 50%;
+		object-fit: cover;
+		align-items: center;
+		justify-content: center;
 	}
 	.portada {
 		width: 80%;
@@ -201,6 +249,7 @@ footer {
 	}
 	p {
 		font-size: 20px;
+	
 	}
 	#main {
 		display: grid;
@@ -288,5 +337,25 @@ footer {
 			flex-wrap: nowrap;
 			margin-left: 20%;
 		}
+	}
+	.whatsapp {
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		bottom: 30px;
+		right: 30px;
+		background-color: #25d366;
+		color: #FFF;
+		border-radius: 30px;
+		text-align: center;
+		font-size: 15px;
+		z-index: 50;
+	}
+	
+	.whatsapp-icon {
+		margin-top: 10px;
+	}
+	a{
+		font-size: 20px;
 	}
 }
