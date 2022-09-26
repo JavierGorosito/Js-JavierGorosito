@@ -26,14 +26,6 @@ img {
      object-fit: contain;
 }
 
-.fotos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 h1 {
   display: inline;
   align-items: center;
@@ -68,11 +60,6 @@ button {
   display: inline;
 }
 
-#menuLa {
-  display: flex;
-  flex-direction: column;
-}
-
 nav {
   grid-area: nav;
 }
@@ -100,6 +87,12 @@ input:hover {
 
 aside {
   grid-area: aside;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  grid-area: header;
 }
 
 footer {
@@ -158,8 +151,8 @@ footer {
     width: 100px;
   }
   .cervezasVinos {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 280px;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -171,23 +164,6 @@ footer {
     width: 50%;
     height: 50%;
     padding: 1px;
-  }
-  #main {
-    display: grid;
-    grid-template-columns: 20% auto;
-    grid-template-rows: repeat(3, auto);
-    -moz-column-gap: 10px;
-         column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas: "nav nav" "aside section" "footer footer";
-  }
-  .section {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    -moz-column-gap: 5px;
-         column-gap: 5px;
-    row-gap: 5px;
   }
   ul {
     display: flex;
@@ -247,14 +223,6 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .img-fluid {
-    height: 60%;
-    width: 50%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    align-items: center;
-    justify-content: center;
-  }
   .portada {
     width: 80%;
     height: 80%;
@@ -263,41 +231,23 @@ footer {
   p {
     font-size: 20px;
   }
-  #main {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(4, auto);
-    -moz-column-gap: 10px;
-         column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas: "header" "nav" "section" "footer";
-  }
-  .section {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    -moz-column-gap: 5px;
-         column-gap: 5px;
-    row-gap: 5px;
-  }
   ul {
     display: grid;
     grid-template-columns: auto auto auto;
     font-size: 20px;
-    justify-content: start;
+    justify-content: center;
     padding: 0%;
   }
   li {
     display: grid;
     grid-template-columns: auto auto auto;
     font-size: 20px;
-    justify-content: start;
+    justify-content: center;
     padding: 0%;
   }
   header {
-    display: flex;
-    margin-right: 50%;
-    justify-content: space-between;
+    display: inline;
+    justify-content: center;
     align-items: center;
   }
   header > img {
@@ -327,11 +277,8 @@ footer {
     text-align: center;
     text-shadow: 2px 2px 2px white;
   }
-  .search {
-    display: none;
-  }
   footer {
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -348,7 +295,13 @@ footer {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-left: 20%;
+    margin-left: 30%;
+  }
+  .cervezasVinos {
+    height: 250px;
+    width: 250px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .whatsapp {
     position: fixed;
@@ -366,7 +319,15 @@ footer {
   .whatsapp-icon {
     margin-top: 10px;
   }
-  a {
-    font-size: 20px;
+  input {
+    font-size: 10px;
+    text-shadow: 2px 2px 2px white;
+    opacity: 0.6;
+    border: 2px 2px 2px, solid, orange;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px orange;
+    box-sizing: initial;
+    font-size: large;
+    align-items: center;
   }
 }/*# sourceMappingURL=Style.css.map */
