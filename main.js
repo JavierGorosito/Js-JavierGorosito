@@ -1,4 +1,51 @@
-const productos = {cervezas: 100, vinos: 50};
+function ProductoBase (nombre, stock, precio, descuento, descuentoPorCantidad) {
+    this.nombre = nombre;
+    this.stock = stock;
+    this.precio = precio;
+    this.descuento = descuento;
+    this.descuentoPorCantidad = descuentoPorCantidad;
+    this.calcularTotal = function (cantidad){
+        return cantidad * this.precio
+    }
+    this.calcularTotalConDescuento = function (cantidad){
+        return cantidad * this.precio * (1 - this.descuento/100) 
+    }
+    this.descontarStock = function (cantidad){
+        this.stock = this.stock - cantidad
+    }
+}
+
+const productos = [
+    {
+        nombre: `Cerveza`, 
+        cantidad: 100, 
+        precio: 120, 
+        descuento: 10,
+        descuentoPorCantidad: 40
+    }, 
+    {
+        nombre: `Viandas Light`, 
+        cantidad: 100, 
+        precio: 350, 
+        descuento: 5,
+        descuentoPorCantidad: 50
+    },
+]
+
+let listaDeProductos = [];
+
+for (let index = 0; index < productos.length; index++) {
+    const producto = new ProductoBase(
+        productos[index].nombre, 
+        productos[index].cantidad, 
+        productos[index].precio, 
+        productos[index].descuento,
+        productos[index].descuentoPorCantidad
+    );
+
+    listaDeProductos.push(producto);
+}
+
 let userProducts = {cervezas: 0, vinos: 0}
 
 let userInput
